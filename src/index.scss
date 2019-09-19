@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    transition: 0.4s;
+}
+
+body {
+    background: gray;
+    margin: 0;
+}
+
+.app {
+    position: relative;
+    display: flex;
+    padding: 0.5em;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        > div {
+            width: 100%;
+        }
+    }
+}
+
+.grid {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+
+    > div {
+        width: calc(100% / 10);
+        padding-top: calc((100% / 10) - 2px);
+        border: 1px solid black;
+        cursor: pointer;
+    }
+
+    > div.first {
+        background: rgb(29, 89, 93);
+    }
+
+    > div.second {
+        background: rgb(94, 95, 41);
+    }
+
+    > div.third {
+        background: rgb(203, 201, 84);
+    }
+
+}
+
+.stats {
+    background: lightgray;
+    width: 50%;
+    padding: 0.5em;
+    span {
+        color: red;
+    }
+}
+
+#popUpNext {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255,255,255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    > div {
+        background: white;
+        border: 4px solid black;
+        padding: 1em;
+        border-radius: 8px;
+    }
+
+    .noYes {
+        display: flex;
+        
+
+        div {
+            border-radius: 8px; 
+            background: black;
+            color: white;
+            padding: 0.5em;
+            margin-top: 1em;
+            margin-right: 1em;
+            cursor: pointer;
+        }
+    }
+}
+
+
+#popUpEnd {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255,255,255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    > div {
+        background: white;
+        border: 4px solid black;
+        padding: 1em;
+        border-radius: 8px;
+    }
+
+    .noYes {
+        display: flex;
+        div {
+            border-radius: 8px; 
+            background: black;
+            color: white;
+            padding: 0.5em;
+            margin-top: 1em;
+            margin-right: 1em;
+            cursor: pointer;
+        }
+    }
+}
+
+#popUpAgain {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255,255,255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    > div {
+        background: white;
+        border: 4px solid black;
+        padding: 1em;
+        border-radius: 8px;
+    }
+
+    .noYes {
+        display: flex;
+        div {
+            border-radius: 8px; 
+            background: black;
+            color: white;
+            padding: 0.5em;
+            margin-top: 1em;
+            margin-right: 1em;
+            cursor: pointer;
+        }
+    }
+}
